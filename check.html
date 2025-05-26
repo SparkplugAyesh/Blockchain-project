@@ -1,0 +1,10 @@
+<!DOCTYPE html>
+<html>
+<head><title>Vote Check</title><link rel="stylesheet" href="/static/style.css"></head>
+<body>
+<div class="container">
+  <h2>Your Vote</h2>
+  {% if vote %}<p>You voted for: <strong>{{ vote }}</strong></p>{% else %}<p class="error">No vote found.</p>{% endif %}
+</div>
+</body>
+</html>

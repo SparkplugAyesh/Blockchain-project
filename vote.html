@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head><title>Vote</title><link rel="stylesheet" href="/static/style.css"></head>
+<body>
+<div class="container">
+  <h2>Cast Your Vote</h2>
+  <form method="POST">
+    {% for c in candidates %}<input type="radio" name="candidate" value="{{ c }}" required> {{ c }}<br>{% endfor %}
+    <button type="submit">Submit Vote</button>
+  </form>
+  {% if message %}<p class="message">{{ message }}</p>{% endif %}
+</div>
+</body>
+</html>

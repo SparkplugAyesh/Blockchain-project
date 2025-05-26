@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head><title>Admin View</title><link rel="stylesheet" href="/static/style.css"></head>
+<body>
+<div class="container">
+  <h2>Admin Dashboard</h2>
+  <ul class="block-list">
+    {% for block in blockchain %}
+      <li>Block {{ block.index }} | {{ block.timestamp }}<br>
+      {% for tx in block.transactions %}Voter {{ tx.voter_id }} has voted<br>{% endfor %}
+      </li>
+    {% endfor %}
+  </ul>
+</div>
+</body>
+</html>

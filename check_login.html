@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head><title>Check Vote</title><link rel="stylesheet" href="/static/style.css"></head>
+<body>
+<div class="container">
+  <h2>Check Your Vote</h2>
+  <form method="POST">
+    <input type="text" name="voter_id" placeholder="Voter ID" required>
+    <input type="password" name="password" placeholder="Password" required>
+    <button type="submit">Check</button>
+  </form>
+  {% if error %}<p class="error">{{ error }}</p>{% endif %}
+</div>
+</body>
+</html>
